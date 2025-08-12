@@ -7,6 +7,7 @@ const connectDB = require('./config/db');
 const userRoutes = require('./routes/userRoutes');
 const todoRoutes = require('./routes/todoRoute');
 
+
 const app = express();
 const port = 3000;
 
@@ -25,6 +26,7 @@ app.get('/', (req, res) => {
 // Route Middleware
 app.use('/api/v1/user', userRoutes);
 app.use('/api/v1/todo', todoRoutes);  // Mount todo routes only once
+// app.use('/api/v1/user',todoRoutes)
 
 // Start the server
 app.listen(port, () => {

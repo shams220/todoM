@@ -103,12 +103,12 @@ return res.status(200).send({
 }
 const editTodo = async (req, res) => {
   try {
-    const updatedTodo = await Todo.findByIdAndUpdate(
-      req.params.id,
+    const updatedTodo = await Todo.findByIdAndUpdate( req.params.Id,
       {
         title: req.body.title,
         description: req.body.description,
-      },
+      }
+      ,
       { new: true, runValidators: true }
     );
 
