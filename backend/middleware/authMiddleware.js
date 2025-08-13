@@ -23,7 +23,9 @@ const auth = async (req, res, next) => {
       }
 
       req.user = decoded; // attach user ID to the request
+      console.log("user:❤️😍"+req.user.userID);
       next();
+
     });
 
   } catch (error) {

@@ -83,12 +83,12 @@ if(!user){
 }else{ 
 
 const userTODO = await Todo.find({createdBy:user.userID})
-console.log(userTODO);
+// console.log(userTODO);
 return res.status(200).send({
     success:true,
     message:"userFound",
     user,
-    userTODO
+    // userTODO
 })
     }
     }
